@@ -46,30 +46,30 @@ var members = [
 
 ];
 
-const itemsCont = document.querySelector(".container");
+// variabile utilizzata per salvare in html
+
+let container = document.querySelector(".team-container");
 
 for(let i = 0; i < members.length; i++){
     let object = members[i];
-    // console.log(object);
-    for(let key in object){
-        console.log(key, object[key]); 
-    }
-    members.innerHtml +=`
+    
+// variabile utilizzata per stampare in html
 
-<div class="team-card">
+    container.innerHTML +=`
+
+        <div class="team-card">
             <div class="card-image">
               <img
-                src="${img_member}"
+                src="${members[i].img_member}"
                 alt="Wayne Barnett"
               />
             </div>
             <div class="card-text">
-              <h3>${name}</h3>
-              <p>${role}</p>
+              <h3>${members[i].name}</h3>
+              <p>${members[i].role}</p>
             </div>
           </div>
         </div>
-      </div>
 
 `
 };
